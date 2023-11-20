@@ -9,6 +9,8 @@ urlpatterns = [
     # view refers to the view function
     # name the URL
     path('', views.home, name='home'),
+     path('home/', views.home, name='home'),
+
 
 
     # path for about view
@@ -20,10 +22,16 @@ urlpatterns = [
 
 
     # path for registration
+    path('signup/', views.user_signup, name='signup'),  # Add the URL pattern for the signup view
+
 
     # path for login
+    path('login/', views.user_login, name='login'),  # Add the URL pattern for the login view
+
 
     # path for logout
+    path('logout/', views.user_logout, name='logout'),  # Add the URL pattern for the logout view
+
 
     path(route='', view=views.get_dealerships, name='index'),
 
